@@ -2,7 +2,7 @@
     <form #loginForm="ngForm" (ngSubmit)="login()">
         <div class="form-group">
             <label for="username">Email</label>
-            <input type="email" class="form-control" id="username" 
+            <input type="email" class="form-control" id="username" autofocus 
                 required [(ngModel)]="model.username" name="username" #username="ngModel">
             <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
                 Username is required
@@ -19,6 +19,7 @@
         </div>
 
         <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Login</button>
+        <span>{{ message }}</span>
     </form>
 </div>
 

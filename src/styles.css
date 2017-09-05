@@ -1,3 +1,6 @@
+/* import global styles */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 /* forms */
 .ng-valid[required], .ng-valid.required  {
     border-left: 5px solid #42A948; /* green */
