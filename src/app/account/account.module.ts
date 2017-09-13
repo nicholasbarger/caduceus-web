@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import { RegistrationFormComponent } from './registration-form/registration-form
   ],
   declarations: [
     LoginFormComponent, 
-    RegistrationFormComponent
+    LoginPageComponent,
+    RegistrationFormComponent, 
+    RegistrationPageComponent
   ],
   exports: [
     LoginFormComponent

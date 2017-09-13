@@ -15,7 +15,7 @@ import { AuthResponse } from './auth-response';
 export class LoginFormComponent implements OnInit {
     private loginUrl: string = "http://localhost:5000/api/appuser/login";
     message: string = null;
-    model: LoginForm = new LoginForm(null, null);
+    model: LoginForm = new LoginForm();
     submitted: boolean = false;
 
     constructor(private http: Http) {
