@@ -16,14 +16,18 @@ import { WorkOrdersPageComponent } from './work-orders/work-orders-page/work-ord
 import { WorkOrderListComponent } from './work-orders/work-order-list/work-order-list.component';
 import { CreateWorkOrderFormComponent } from './work-orders/create-work-order-form/create-work-order-form.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { FeaturesPageComponent } from './features-page/features-page.component';
+import { PricingPageComponent } from './pricing-page/pricing-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
+  { path: 'features', component: FeaturesPageComponent },
   { path: 'home', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent },
-  { path: 'registration', component: RegistrationPageComponent },
   { path: 'inventory/items', component: InventoryItemsPageComponent },
   { path: 'inventory/create-item', component: CreateInventoryItemPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'pricing', component: PricingPageComponent },
+  { path: 'signup', component: RegistrationPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 
@@ -35,7 +39,9 @@ const appRoutes: Routes = [
     WorkOrdersPageComponent,
     WorkOrderListComponent,
     CreateWorkOrderFormComponent,
-    NavigationComponent
+    NavigationComponent,
+    FeaturesPageComponent,
+    PricingPageComponent
   ],
   imports: [
     BrowserModule,
