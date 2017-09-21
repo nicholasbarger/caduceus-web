@@ -6,8 +6,8 @@ export class InventoryItem {
         public length: number = null,
         public name: string = null,
         public revision: string = null,
-        public status: string = null,
-        public unitOfMeasure: string = null,
+        public statusId: string = null,
+        public unitOfMeasureId: string = null,
         public weight: number = null,
         public width: number = null) {
     }

@@ -1,3 +1,22 @@
-<p>
-  work-order-list works!
-</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Units</th>
+      <th>Status</th>
+      <th>Due Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let workOrder of workOrders" (click)="select(workOrder)">
+      <td>{{ workOrder.id }}</td>
+      <td>{{ workOrder.inventoryItemId }}</td>
+      <td>{{ workOrder.quantity }}</td>
+      <td>{{ workOrder.unitOfMeasureId }}</td>
+      <td>{{ workOrder.statusId }}</td>
+      <td>{{ workOrder.dueDate | date:'MM/dd/yyyy' }}</td>
+    </tr>
+  </tbody>
+</table>

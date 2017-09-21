@@ -4,17 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AccountModule } from './account/account.module';
 import { InventoryModule } from './inventory/inventory.module';
+import { WorkOrdersModule } from './work-orders/work-orders.module';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home/home-page/home-page.component';
 import { LoginPageComponent } from './account/login-page/login-page.component';
 import { RegistrationPageComponent } from './account/registration-page/registration-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { InventoryItemsPageComponent } from './inventory/items-page/items-page.component';
-import { CreateInventoryItemPageComponent } from './inventory/create-item-page/create-item-page.component';
-import { WorkOrdersPageComponent } from './work-orders/work-orders-page/work-orders-page.component';
-import { WorkOrderListComponent } from './work-orders/work-order-list/work-order-list.component';
-import { CreateWorkOrderFormComponent } from './work-orders/create-work-order-form/create-work-order-form.component';
+
 import { NavigationComponent } from './navigation/navigation.component';
 import { FeaturesPageComponent } from './features-page/features-page.component';
 import { PricingPageComponent } from './pricing-page/pricing-page.component';
@@ -23,8 +20,6 @@ const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'features', component: FeaturesPageComponent },
   { path: 'home', component: HomePageComponent },
-  { path: 'inventory/items', component: InventoryItemsPageComponent },
-  { path: 'inventory/create-item', component: CreateInventoryItemPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'pricing', component: PricingPageComponent },
   { path: 'signup', component: RegistrationPageComponent },
@@ -36,9 +31,6 @@ const appRoutes: Routes = [
     AppComponent,
     HomePageComponent,
     NotFoundPageComponent,
-    WorkOrdersPageComponent,
-    WorkOrderListComponent,
-    CreateWorkOrderFormComponent,
     NavigationComponent,
     FeaturesPageComponent,
     PricingPageComponent
@@ -47,6 +39,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AccountModule,
     InventoryModule,
+    WorkOrdersModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
