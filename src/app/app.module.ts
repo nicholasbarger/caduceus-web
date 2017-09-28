@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AccountModule } from './account/account.module';
 import { InventoryModule } from './inventory/inventory.module';
+import { ManufacturingModule } from './manufacturing/manufacturing.module';
 import { WorkOrdersModule } from './work-orders/work-orders.module';
 
 import { AppComponent } from './app.component';
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     InventoryModule,
+    ManufacturingModule,
     WorkOrdersModule,
     RouterModule.forRoot(appRoutes)
   ],

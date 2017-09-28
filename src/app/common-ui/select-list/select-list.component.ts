@@ -13,7 +13,7 @@ import { ControlValueAccessor, NgModel, NG_VALUE_ACCESSOR } from '@angular/forms
 })
 export class SelectListComponent implements ControlValueAccessor {
   @Input() list: any[];
-  @Input() id: string;
+  @Input() name: string;
   @Input() model: NgModel;
 
   constructor() { }

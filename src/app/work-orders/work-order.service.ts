@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { WorkOrder } from './work-order';
-import { WorkOrderDetail } from './work-order-detail';
-import { WorkOrderListItem } from './work-order-list-item';
+import { WorkOrderDetail } from './work-order-detail/work-order-detail';
+import { WorkOrderListItem } from './work-order-list/work-order-list-item';
 
 @Injectable()
 export class WorkOrderService {
@@ -34,7 +34,7 @@ export class WorkOrderService {
     return Promise.resolve(workOrder);
   }
 
-  update(workOrder: WorkOrder): Promise<WorkOrder> {
+  update(workOrder: WorkOrderDetail): Promise<WorkOrderDetail> {
     return Promise.resolve(workOrder);
   }
 }

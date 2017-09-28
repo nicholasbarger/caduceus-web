@@ -4,7 +4,7 @@
 
 <work-order-list (onSelected)="onWorkOrderSelected($event)"></work-order-list>
 
-<side-panel [visible]="isCreateVisible">
+<side-panel [visible]="isCreateVisible" (onToggleVisibility)="toggleCreateVisibility($event)">
     <create-work-order-page></create-work-order-page>
 </side-panel>
 

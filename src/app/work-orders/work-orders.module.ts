@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CommonUiModule } from '../common-ui/common-ui.module';
 import { InventoryModule } from '../inventory/inventory.module'
+import { ManufacturingModule } from '../manufacturing/manufacturing.module';
 
 import { CreateWorkOrderPageComponent } from './create-work-order-page/create-work-order-page.component';
 import { CreateWorkOrderFormComponent } from './create-work-order-form/create-work-order-form.component';
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     InventoryModule,
+    ManufacturingModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [

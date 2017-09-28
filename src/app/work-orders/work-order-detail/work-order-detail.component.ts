@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { WorkOrderService } from '../work-order.service';
-import { WorkOrderDetail } from '../work-order-detail';
+import { WorkOrderDetail } from './work-order-detail';
 
 @Component({
   selector: 'work-order-detail',

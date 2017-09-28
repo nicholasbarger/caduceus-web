@@ -1,5 +1,5 @@
 import { Component, OnInit, SimpleChange } from '@angular/core';
-import { WorkOrderListItem } from '../work-order-list-item';
+import { WorkOrderListItem } from '../work-order-list/work-order-list-item';
 
 @Component({
   selector: 'work-orders-page',

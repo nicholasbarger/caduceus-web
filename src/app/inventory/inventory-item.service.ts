@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { InventoryItem } from './inventory-item';
-import { InventoryItemSelectListItem } from './inventory-item-select-list-item';
+import { InventoryItemSelectListItem } from './inventory-item-select-list/inventory-item-select-list-item';
 
 @Injectable()
 export class InventoryItemService {

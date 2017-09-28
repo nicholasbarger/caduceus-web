@@ -35,8 +35,6 @@ const appRoutes: Routes = [
     InventoryItemSelectListComponent
   ],
   exports: [
-    CreateInventoryItemPageComponent,
-    InventoryItemsPageComponent,
     InventoryItemSelectListComponent
   ],
   providers: [

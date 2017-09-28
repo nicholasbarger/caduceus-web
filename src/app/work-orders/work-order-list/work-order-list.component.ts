@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { WorkOrderListItem } from '../work-order-list-item';
+import { WorkOrderListItem } from './work-order-list-item';
 import { WorkOrderService } from '../work-order.service';
 
 @Component({

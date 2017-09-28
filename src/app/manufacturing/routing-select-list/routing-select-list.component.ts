@@ -1,26 +1,26 @@
 import { Component, Input, forwardRef, OnInit, ViewChild } from '@angular/core';
 import { ControlValueAccessor, NgModel, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { InventoryItemService } from '../inventory-item.service';
-import { InventoryItemSelectListItem } from './inventory-item-select-list-item';
+import { RoutingService } from '../routing.service';
+import { RoutingSelectListItem } from './routing-select-list-item';
 
 @Component({
-  selector: 'inventory-item-select-list',
-  templateUrl: './inventory-item-select-list.component.html',
-  styleUrls: ['./inventory-item-select-list.component.css'],
+  selector: 'routing-select-list',
+  templateUrl: './routing-select-list.component.html',
+  styleUrls: ['./routing-select-list.component.css'],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => InventoryItemSelectListComponent),
+    useExisting: forwardRef(() => RoutingSelectListComponent),
     multi: true
   }]
 })
-export class InventoryItemSelectListComponent implements ControlValueAccessor, OnInit {
+export class RoutingSelectListComponent implements ControlValueAccessor, OnInit {
   @Input() name: string;
   @Input() model: NgModel;
 
-  list: InventoryItemSelectListItem[];
+  list: RoutingSelectListItem[];
 
-  constructor(public service: InventoryItemService) { }
+  constructor(public service: RoutingService) { }
 
   ngOnInit() {
     this.service.getSelectListCollection().then(data => this.list = data);
