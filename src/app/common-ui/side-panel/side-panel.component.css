@@ -1,0 +1,11 @@
+section {
+    width: 50%; 
+    position: absolute; 
+    right: 0px; 
+    top: 59px; 
+    height: 100%; 
+    background-color: #E9E9E9; 
+    border-left: 1px solid #ccc; 
+    opacity: 0.90; 
+    padding: 15px;
+}

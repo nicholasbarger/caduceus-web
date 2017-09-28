@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { CommonUiModule } from '../common-ui/common-ui.module';
+
 import { ItemListComponent } from './item-list/item-list.component';
 import { CreateItemFormComponent } from './create-item-form/create-item-form.component';
 import { InventoryItemsPageComponent } from './items-page/items-page.component';
 import { CreateInventoryItemPageComponent } from './create-item-page/create-item-page.component';
 
 import { InventoryItemService } from './inventory-item.service';
+import { InventoryItemSelectListComponent } from './inventory-item-select-list/inventory-item-select-list.component';
 
 const appRoutes: Routes = [
   { path: 'inventory/items/list', component: InventoryItemsPageComponent },
@@ -19,6 +22,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    CommonUiModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
@@ -27,11 +31,13 @@ const appRoutes: Routes = [
     ItemListComponent,
     CreateItemFormComponent,
     InventoryItemsPageComponent, 
-    CreateInventoryItemPageComponent
+    CreateInventoryItemPageComponent, 
+    InventoryItemSelectListComponent
   ],
   exports: [
     CreateInventoryItemPageComponent,
-    InventoryItemsPageComponent
+    InventoryItemsPageComponent,
+    InventoryItemSelectListComponent
   ],
   providers: [
     InventoryItemService

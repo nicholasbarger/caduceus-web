@@ -12,10 +12,10 @@
   <tbody>
     <tr *ngFor="let workOrder of workOrders" (click)="select(workOrder)">
       <td>{{ workOrder.id }}</td>
-      <td>{{ workOrder.inventoryItemId }}</td>
+      <td>{{ workOrder.inventoryItem }}</td>
       <td>{{ workOrder.quantity }}</td>
-      <td>{{ workOrder.unitOfMeasureId }}</td>
-      <td>{{ workOrder.statusId }}</td>
+      <td>{{ workOrder.unitOfMeasure }}</td>
+      <td>{{ workOrder.status }}</td>
       <td>{{ workOrder.dueDate | date:'MM/dd/yyyy' }}</td>
     </tr>
   </tbody>

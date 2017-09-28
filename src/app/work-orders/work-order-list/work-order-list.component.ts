@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { WorkOrder } from '../work-order';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { WorkOrderListItem } from '../work-order-list-item';
 import { WorkOrderService } from '../work-order.service';
 
 @Component({
@@ -8,7 +8,9 @@ import { WorkOrderService } from '../work-order.service';
   styleUrls: ['./work-order-list.component.css']
 })
 export class WorkOrderListComponent implements OnInit {
-  workOrders: WorkOrder[];
+  @Output() onSelected = new EventEmitter<WorkOrderListItem>();
+  
+  workOrders: WorkOrderListItem[];
 
   constructor(public workOrderService: WorkOrderService) { }
 
@@ -16,8 +18,8 @@ export class WorkOrderListComponent implements OnInit {
     this.workOrderService.getCollection(null).then(data => this.workOrders = data);
   }
 
-  select(workOrder: WorkOrder) {
-    console.log(workOrder.id);
+  select(workOrder: WorkOrderListItem) {
+    this.onSelected.emit(workOrder);
   }
 
 }

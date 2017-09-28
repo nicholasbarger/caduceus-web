@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { InventoryItem } from './inventory-item';
+import { InventoryItemSelectListItem } from './inventory-item-select-list-item';
 
 @Injectable()
 export class InventoryItemService {
@@ -16,6 +17,17 @@ export class InventoryItemService {
       .toPromise()
       .then(response => response.json() as InventoryItem[])
       .catch(this.handleError);
+  }
+
+  getSelectListCollection(): Promise<InventoryItemSelectListItem[]> {
+    // todo: replace fake
+    var fakeData: InventoryItemSelectListItem[] = [
+      new InventoryItemSelectListItem(1, 'Item 1'),
+      new InventoryItemSelectListItem(2, 'Item 2'),
+      new InventoryItemSelectListItem(3, 'Item 3'),
+    ];
+
+    return Promise.resolve(fakeData);
   }
 
   getSingle(id: number): Promise<InventoryItem> {

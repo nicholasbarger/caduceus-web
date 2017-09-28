@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { WorkOrder } from './work-order';
+import { WorkOrderDetail } from './work-order-detail';
+import { WorkOrderListItem } from './work-order-list-item';
 
 @Injectable()
 export class WorkOrderService {
@@ -12,17 +14,24 @@ export class WorkOrderService {
     return Promise.resolve(workOrder);
   }
 
-  getCollection(filter: any): Promise<WorkOrder[]> {
+  getCollection(filter: any): Promise<WorkOrderListItem[]> {
     // todo: add data from filter
-    var fakeWorkOrders: WorkOrder[] = [
-      new WorkOrder(1, new Date(), new Date(), 1000, 1, true, 100, 1, 1, 1),
-      new WorkOrder(2, new Date(), new Date(), 1001, 2, true, 1000, 2, 2, 2)
+    var fakeWorkOrders: WorkOrderListItem[] = [
+      new WorkOrderListItem(1, 'DaisyCutter', 300, 'Cans', 'In Progress', new Date()),
+      new WorkOrderListItem(2, 'Vallejo', 150, 'Bottles', 'Open', new Date())
     ];
     return Promise.resolve(fakeWorkOrders);
   }
 
-  getSingle(id: number): Promise<WorkOrder> {
-    return Promise.resolve(new WorkOrder(1, new Date(), new Date(), 1000, 1, true, 100, 1, 1, 1));
+  getSingle(id: number): Promise<WorkOrderDetail> {
+    var workOrder = new WorkOrderDetail();
+    workOrder.billOfMaterial = 'DaisyCutter Recipe #2';
+    workOrder.inventoryItem = 'DaisyCutter';
+    workOrder.quantity = 300;
+    workOrder.routing = 'DaisyCutter Process #2';
+    workOrder.unitOfMeasure = 'Liters';
+    
+    return Promise.resolve(workOrder);
   }
 
   update(workOrder: WorkOrder): Promise<WorkOrder> {

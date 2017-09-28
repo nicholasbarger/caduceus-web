@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-create-work-order-page',
+  selector: 'create-work-order-page',
   templateUrl: './create-work-order-page.component.html',
   styleUrls: ['./create-work-order-page.component.css']
 })

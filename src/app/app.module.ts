@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -36,8 +37,9 @@ const appRoutes: Routes = [
     PricingPageComponent
   ],
   imports: [
-    BrowserModule,
     AccountModule,
+    BrowserModule,
+    FormsModule,
     InventoryModule,
     WorkOrdersModule,
     RouterModule.forRoot(appRoutes)
