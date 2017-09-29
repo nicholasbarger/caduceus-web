@@ -4,8 +4,8 @@ section {
     right: 0px; 
     top: 59px; 
     height: 100%; 
-    background-color: #E9E9E9; 
-    border-left: 1px solid #ccc; 
-    opacity: 0.90; 
+    background-color: #383c46;
+    border-left: 2px solid #513b0a; 
     padding: 15px;
+    box-shadow: -5px 0px 21px #161616;
 }
