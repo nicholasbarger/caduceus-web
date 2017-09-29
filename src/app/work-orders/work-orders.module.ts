@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CommonUiModule } from '../common-ui/common-ui.module';
+import { AppCommonModule } from '../common/app-common.module';
 import { InventoryModule } from '../inventory/inventory.module'
 import { ManufacturingModule } from '../manufacturing/manufacturing.module';
 
@@ -15,16 +15,18 @@ import { WorkOrderListComponent } from './work-order-list/work-order-list.compon
 import { WorkOrderDetailComponent } from './work-order-detail/work-order-detail.component';
 
 import { WorkOrderService } from './work-order.service';
+import { WorkOrdersCalendarPageComponent } from './work-orders-calendar-page/work-orders-calendar-page.component';
 
 const appRoutes: Routes = [
-  { path: 'work-orders/list', component: WorkOrdersPageComponent },
+  { path: 'work-orders', component: WorkOrdersPageComponent },
+  { path: 'work-orders/calendar', component: WorkOrdersCalendarPageComponent },
   { path: 'work-orders/create', component: CreateWorkOrderPageComponent }
 ];
 
 @NgModule({
   imports: [
+    AppCommonModule,
     CommonModule,
-    CommonUiModule,
     FormsModule,
     HttpModule,
     InventoryModule,
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     CreateWorkOrderFormComponent,
     WorkOrdersPageComponent,
     WorkOrderListComponent,
-    WorkOrderDetailComponent
+    WorkOrderDetailComponent,
+    WorkOrdersCalendarPageComponent
   ],
   providers: [
     WorkOrderService

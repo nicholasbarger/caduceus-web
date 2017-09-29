@@ -1,4 +1,4 @@
-export class InventoryItemSelectListItem {
+export class SelectListItem {
     constructor(
         public value: number,
         public display: string) {

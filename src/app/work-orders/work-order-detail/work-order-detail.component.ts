@@ -7,20 +7,20 @@ import { WorkOrderDetail } from './work-order-detail';
   templateUrl: './work-order-detail.component.html',
   styleUrls: ['./work-order-detail.component.css']
 })
-export class WorkOrderDetailComponent implements OnInit {
+export class WorkOrderDetailComponent implements OnInit, OnChanges {
 
   @Input() id: number;
   model: WorkOrderDetail = null;
 
-  constructor(public workOrderService: WorkOrderService) { 
+  constructor(public service: WorkOrderService) { 
   }
 
   ngOnInit() {
-    this.workOrderService.getSingle(this.id).then(data => this.model = data);
+    this.service.getSingle(this.id).then(data => this.model = data);
   }
 
   ngOnChanges(changes: any) {
-    this.workOrderService.getSingle(this.id).then(data => this.model = data);
+    this.service.getSingle(this.id).then(data => this.model = data);
   }
 
 }

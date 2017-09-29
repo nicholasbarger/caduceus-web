@@ -2,7 +2,7 @@ import { Component, Input, forwardRef, OnInit, ViewChild } from '@angular/core';
 import { ControlValueAccessor, NgModel, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { InventoryItemService } from '../inventory-item.service';
-import { InventoryItemSelectListItem } from './inventory-item-select-list-item';
+import { SelectListItem } from '../../common/select-list/select-list-item';
 
 @Component({
   selector: 'inventory-item-select-list',
@@ -18,7 +18,7 @@ export class InventoryItemSelectListComponent implements ControlValueAccessor, O
   @Input() name: string;
   @Input() model: NgModel;
 
-  list: InventoryItemSelectListItem[];
+  list: SelectListItem[];
 
   constructor(public service: InventoryItemService) { }
 

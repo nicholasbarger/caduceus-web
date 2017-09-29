@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-import { InventoryItem } from '../inventory-item';
+import { InventoryItemListItem } from './inventory-item-list-item';
 import { InventoryItemService } from '../inventory-item.service'
 
 @Component({
@@ -9,8 +9,9 @@ import { InventoryItemService } from '../inventory-item.service'
   styleUrls: ['./item-list.component.css']
 })
 export class ItemListComponent implements OnInit {
+  @Output() onSelected = new EventEmitter<InventoryItemListItem>();
 
-  items: InventoryItem[];
+  items: InventoryItemListItem[];
 
   constructor(private service: InventoryItemService) { }
 
@@ -23,4 +24,7 @@ export class ItemListComponent implements OnInit {
     this.service.getCollection(filter).then(response => this.items = response);
   }
 
+  select(item: InventoryItemListItem): void {
+    this.onSelected.emit(item);
+  }
 }

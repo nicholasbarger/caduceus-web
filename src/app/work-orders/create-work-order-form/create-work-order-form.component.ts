@@ -1,7 +1,7 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
-import { CreateWorkOrderVm } from './create-work-order-vm';
+import { Component, OnInit } from '@angular/core';
 
-import { InventoryItemService } from '../../inventory/inventory-item.service';
+import { CreateWorkOrderVm } from './create-work-order-vm';
+import { WorkOrderService } from '../work-order.service';
 
 @Component({
   selector: 'create-work-order-form',
@@ -11,9 +11,13 @@ import { InventoryItemService } from '../../inventory/inventory-item.service';
 export class CreateWorkOrderFormComponent implements OnInit {
   public model: CreateWorkOrderVm = new CreateWorkOrderVm();
 
-  constructor(public service: InventoryItemService) { }
+  constructor(public service: WorkOrderService) { }
 
   ngOnInit() {
+  }
+
+  submit(): void {
+    // todo
   }
 
 }

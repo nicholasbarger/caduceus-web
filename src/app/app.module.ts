@@ -3,48 +3,36 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AppCommonModule } from './common/app-common.module';
 import { AccountModule } from './account/account.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { ManufacturingModule } from './manufacturing/manufacturing.module';
+import { MarketingModule } from './marketing/marketing.module';
+import { AdminModule } from './admin/admin.module';
 import { WorkOrdersModule } from './work-orders/work-orders.module';
 
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home/home-page/home-page.component';
-import { LoginPageComponent } from './account/login-page/login-page.component';
-import { RegistrationPageComponent } from './account/registration-page/registration-page.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
-import { NavigationComponent } from './navigation/navigation.component';
-import { FeaturesPageComponent } from './features-page/features-page.component';
-import { PricingPageComponent } from './pricing-page/pricing-page.component';
-
-const appRoutes: Routes = [
-  { path: '', component: HomePageComponent },
-  { path: 'features', component: FeaturesPageComponent },
-  { path: 'home', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent },
-  { path: 'pricing', component: PricingPageComponent },
-  { path: 'signup', component: RegistrationPageComponent },
-  { path: '**', component: NotFoundPageComponent }
-];
+const appRoutes: Routes = [];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    NotFoundPageComponent,
-    NavigationComponent,
-    FeaturesPageComponent,
-    PricingPageComponent
-  ],
   imports: [
     AccountModule,
+    AdminModule,
+    AppCommonModule,
+    DashboardModule,
     BrowserModule,
     FormsModule,
     InventoryModule,
     ManufacturingModule,
     WorkOrdersModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+
+    MarketingModule  // must be last because of wildcard catch all in routes
+  ],
+  declarations: [
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

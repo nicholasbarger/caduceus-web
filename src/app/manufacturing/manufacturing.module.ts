@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CommonUiModule } from '../common-ui/common-ui.module';
+import { AppCommonModule } from '../common/app-common.module';
 import { InventoryModule } from '../inventory/inventory.module'
 
 import { CreateRoutingFormComponent } from './/create-routing-form/create-routing-form.component';
@@ -22,8 +22,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
+    AppCommonModule,
     CommonModule,
-    CommonUiModule,
     FormsModule,
     HttpModule,
     InventoryModule,
