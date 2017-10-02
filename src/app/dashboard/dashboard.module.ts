@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppCommonModule } from '../common/app-common.module';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { MyWorkPageComponent } from './my-work-page/my-work-page.component';
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     AppCommonModule,
+    ChartsModule,
     CommonModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
