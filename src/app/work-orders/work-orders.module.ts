@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppCommonModule } from '../common/app-common.module';
+import { CalendarModule } from "ap-angular2-fullcalendar";
 import { InventoryModule } from '../inventory/inventory.module'
 import { ManufacturingModule } from '../manufacturing/manufacturing.module';
 
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     AppCommonModule,
+    CalendarModule,
     CommonModule,
     FormsModule,
     HttpModule,

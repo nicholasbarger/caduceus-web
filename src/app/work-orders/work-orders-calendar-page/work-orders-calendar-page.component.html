@@ -1,3 +1,9 @@
-<p>
-  work-orders-calendar-page works!
-</p>
+<angular2-fullcalendar [options]="calendarOptions"></angular2-fullcalendar>
+
+<side-panel [visible]="isCreateVisible" (onToggleVisibility)="toggleCreateVisibility($event)">
+    <create-work-order-page></create-work-order-page>
+</side-panel>
+
+<side-panel [visible]="isDetailVisible" (onToggleVisibility)="toggleDetailVisibility($event)">
+    <work-order-detail [id]="selectedWorkOrderId"></work-order-detail>
+</side-panel>
