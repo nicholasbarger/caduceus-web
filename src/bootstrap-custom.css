@@ -34,6 +34,11 @@ body {
     border: 1px solid #1bbf89;
 }
 
+/* cards */
+.card {
+    background-color: #3D3F48;
+}
+
 /* forms */
 form {
     text-align: left;
@@ -55,6 +60,7 @@ form label {
 h2 {
     font-size: 2em;
     margin-bottom: 15px;
+    color: #fff;
 }
 
 /* tables */
@@ -68,4 +74,12 @@ h2 {
 }
 .table tbody td {
     border: none;
+}
+
+/* tabs */
+.tab-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
