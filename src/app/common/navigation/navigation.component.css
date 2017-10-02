@@ -25,6 +25,9 @@ form .form-control, form .btn {
 .nav-link {
     color: #6E6E6E;
 }
+.nav-link.active {
+    border-bottom: 2px solid orange;
+}
 
 .profile {
     width: 50px;
