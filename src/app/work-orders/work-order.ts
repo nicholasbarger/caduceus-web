@@ -1,10 +1,10 @@
 import { BillOfMaterial } from '../manufacturing/bill-of-material';
-import { DomainModel } from '../domain-model';
+import { DomainModel } from '../common/domain-model';
 import { InventoryItem } from '../inventory/inventory-item';
 import { Routing } from '../manufacturing/routing';
 import { WorkOrderStatus } from './work-order-status';
 import { WorkOrderStep } from './work-order-step';
-import { UnitOfMeasure } from '../unit-of-measure';
+import { UnitOfMeasure } from '../inventory/unit-of-measure';
 
 export class WorkOrder extends DomainModel{
     constructor(

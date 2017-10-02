@@ -1,4 +1,4 @@
-import { Attachment } from '../attachment';
+import { Attachment } from '../common/attachment';
 
 export class QualityTest {
     constructor(

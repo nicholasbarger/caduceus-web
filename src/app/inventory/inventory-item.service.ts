@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import { InventoryItem } from './inventory-item';
 import { InventoryItemDetail } from './inventory-item-detail/inventory-item-detail';
 import { InventoryItemListItem } from './item-list/inventory-item-list-item';
-import { SelectListItem } from '../common-ui/select-list/select-list-item';
+import { SelectListItem } from '../common/select-list/select-list-item';
 
 @Injectable()
 export class InventoryItemService {

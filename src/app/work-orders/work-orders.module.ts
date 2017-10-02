@@ -43,6 +43,9 @@ const appRoutes: Routes = [
   ],
   providers: [
     WorkOrderService
+  ],
+  exports: [
+    WorkOrderListComponent
   ]
 })
 export class WorkOrdersModule { }

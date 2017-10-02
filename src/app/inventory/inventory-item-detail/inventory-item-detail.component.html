@@ -41,6 +41,60 @@
         <label for="unitOfMeasure">Unit Of Measure</label>
         <span id="unitOfMeasure" class="form-control">{{ model.unitOfMeasure }}</span>
     </div>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="" data-toggle="tab" data-target="#stats">Stats</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#routers">Routers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#boms">Bill Of Materials</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#work-orders">Work Orders</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#activity">Activity</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="stats" class="tab-pane active">
+            <label for="ontime">On-Time Delivery:</label>
+            <span>95%</span><br>
+
+            <label for="cycletime">Cycle Time:</label>
+            <span>13 hours</span><br>
+
+            <label for="changeovertime">Changeover Time:</label>
+            <span>3 hours</span><br>
+
+            <label for="yield">Yield:</label>
+            <span>98%</span><br>
+
+            <label for="returns">Customer Returns:</label>
+            <span>1.5% (13)</span><br>
+
+            <label for="incidents">Safety Incidents:</label>
+            <span>3</span><br>
+
+            <label for="cost">Cost per Unit:</label>
+            <span>$3.14</span><br>
+        </div>
+        <div id="routers" class="tab-pane">
+            <p>Todo: list of routers.</p>
+        </div>
+        <div id="boms" class="tab-pane">
+            <p>Todo: list of boms.</p>
+        </div>
+        <div id="work-orders" class="tab-pane">
+            <p>Here is a list of work orders.</p>
+        </div>
+        <div id="activity" class="tab-pane">
+            <p>Todo: recent activity for this inventory item.</p>
+        </div>
+    </div>
   </div>
   
   {{ model | json }}

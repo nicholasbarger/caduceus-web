@@ -1,4 +1,4 @@
-import { AppUser } from '../app-user';
+import { AppUser } from '../common/app-user';
 import { WorkOrder } from '../work-orders/work-order';
 
 export class LoggedWork {

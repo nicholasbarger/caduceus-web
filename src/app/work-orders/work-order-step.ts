@@ -1,4 +1,4 @@
-import { AppUser } from '../app-user';
+import { AppUser } from '../common/app-user';
 import { QualityTestResult } from '../manufacturing/quality-test-result';
 import { LoggedWork } from '../manufacturing/logged-work';
 import { RoutingStep } from '../manufacturing/routing-step';
