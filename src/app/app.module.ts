@@ -39,6 +39,7 @@ import { WorkOrderDetailComponent } from './work-orders/work-order-detail/work-o
 import { WorkOrderService } from './work-orders/work-order.service';
 import { WorkOrdersCalendarPageComponent } from './work-orders/work-orders-calendar-page/work-orders-calendar-page.component';
 import { WorkOrdersPageComponent } from './work-orders/work-orders-page/work-orders-page.component';
+import { WorkOrderWorkflowComponent } from './work-orders/work-order-workflow/work-order-workflow.component';
 
 
 const appRoutes: Routes = [
@@ -95,6 +96,7 @@ const appRoutes: Routes = [
     WorkOrdersPageComponent,
     WorkOrderListComponent,
     WorkOrderDetailComponent,
+    WorkOrderWorkflowComponent,
   ],
   providers: [
     InventoryItemService,

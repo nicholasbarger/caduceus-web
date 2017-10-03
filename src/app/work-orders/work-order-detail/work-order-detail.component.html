@@ -22,7 +22,7 @@
       <span id="billOfMaterial" class="form-control">{{ model.billOfMaterial }}</span>
   </div>
 
-  <p>Todo: let's add a timeline of each step and the quantity completed/scrapped for each step.</p>
+  <work-order-workflow [order]="model"></work-order-workflow>
 </div>
 
 {{ model | json }}
