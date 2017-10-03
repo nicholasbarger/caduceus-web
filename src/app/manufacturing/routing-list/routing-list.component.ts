@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-routing-list',
+  selector: 'routing-list',
   templateUrl: './routing-list.component.html',
   styleUrls: ['./routing-list.component.css']
 })
