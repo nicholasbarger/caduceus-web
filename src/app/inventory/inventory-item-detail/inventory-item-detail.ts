@@ -1,3 +1,5 @@
+import { AuditEntryListItem } from '../../common/audit-list/audit-entry-list-item';
+
 export class InventoryItemDetail {
     constructor(
         public id: string,
@@ -10,7 +12,8 @@ export class InventoryItemDetail {
         public status: string,
         public unitOfMeasure: string = null,
         public weight: number = null,
-        public width: number = null
+        public width: number = null,
+        public activity: AuditEntryListItem[] = null
     ) {        
     }
     
