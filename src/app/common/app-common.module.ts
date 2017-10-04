@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component'
 import { SelectListComponent } from './select-list/select-list.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
+import { AuditListComponent } from './audit-list/audit-list.component';
 
 @NgModule({
   imports: [
@@ -14,9 +15,11 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
   declarations: [
     NavigationComponent,
     SelectListComponent,
-    SidePanelComponent
+    SidePanelComponent,
+    AuditListComponent
   ],
   exports: [
+    AuditListComponent,
     NavigationComponent,
     SelectListComponent,
     SidePanelComponent

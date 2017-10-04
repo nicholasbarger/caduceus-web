@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let location of locations">
+    {{ location.name }}
+    <inventory-sub-location-list [subLocations]="location.subLocations"></inventory-sub-location-list>
+  </li>
+</ul>

@@ -24,7 +24,10 @@ import { InventoryItemsPageComponent } from './inventory/items-page/items-page.c
 import { InventoryItemService } from './inventory/inventory-item.service';
 import { InventoryItemSelectListComponent } from './inventory/inventory-item-select-list/inventory-item-select-list.component';
 import { InventoryItemDetailComponent } from './inventory/inventory-item-detail/inventory-item-detail.component';
+import { InventoryLocationListComponent } from './inventory/inventory-location-list/inventory-location-list.component';
 import { InventoryLocationsPageComponent } from './inventory/inventory-locations-page/inventory-locations-page.component';
+import { InventoryLocationService } from './inventory/inventory-location.service';
+import { InventorySubLocationListComponent } from './inventory/inventory-location-list/inventory-sub-location-list.component';
 import { MyWorkPageComponent } from './dashboard/my-work-page/my-work-page.component';
 import { NotFoundPageComponent } from './common/not-found-page/not-found-page.component';
 import { RoutingListComponent } from './manufacturing/routing-list/routing-list.component';
@@ -40,6 +43,7 @@ import { WorkOrderService } from './work-orders/work-order.service';
 import { WorkOrdersCalendarPageComponent } from './work-orders/work-orders-calendar-page/work-orders-calendar-page.component';
 import { WorkOrdersPageComponent } from './work-orders/work-orders-page/work-orders-page.component';
 import { WorkOrderWorkflowComponent } from './work-orders/work-order-workflow/work-order-workflow.component';
+
 
 
 const appRoutes: Routes = [
@@ -84,6 +88,7 @@ const appRoutes: Routes = [
     InventoryItemsPageComponent, 
     InventoryItemSelectListComponent, 
     InventoryLocationsPageComponent, 
+    InventorySubLocationListComponent,
     ItemListComponent,
     MyWorkPageComponent,
     NotFoundPageComponent,
@@ -97,9 +102,11 @@ const appRoutes: Routes = [
     WorkOrderListComponent,
     WorkOrderDetailComponent,
     WorkOrderWorkflowComponent,
+    InventoryLocationListComponent,
   ],
   providers: [
     InventoryItemService,
+    InventoryLocationService,
     RoutingService,
     UnitOfMeasureService,
     WorkOrderService
