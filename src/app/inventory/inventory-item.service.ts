@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
+import { AuditEntryListItem } from '../common/audit-list/audit-entry-list-item';
 import { InventoryItem } from './inventory-item';
 import { InventoryItemDetail } from './inventory-item-detail/inventory-item-detail';
 import { InventoryItemListItem } from './item-list/inventory-item-list-item';
@@ -44,10 +45,18 @@ export class InventoryItemService {
     //   .then(response => response.json() as InventoryItem)
     //   .catch(this.handleError);
 
-    return Promise.resolve(new InventoryItemDetail(
+    var fakeItem = new InventoryItemDetail(
       '1001', 'DC2016', 'Daisy Cutter high grain alcohol', 10, 5, 'DaisyCutter', '1',
-      'Active', 'EA', 16, 15)
-    );
+      'Active', 'EA', 16, 15);
+
+    fakeItem.activity = [
+      new AuditEntryListItem('Created', 'DaisyCutter was initially created.', new Date(), 'nbarger', 'Nicholas', 'Barger'),
+      new AuditEntryListItem('Updated', 'DaisyCutter was updated.', new Date(), 'nbarger', 'Nicholas', 'Barger'),
+      new AuditEntryListItem('Approved', 'DaisyCutter was approved.', new Date(), 'kbarger', 'Kaitlyn', 'Barger'),
+      new AuditEntryListItem('Manufactured', 'DaisyCutter was manufactured through Work Order #2001.', new Date(), 'nbarger', 'Nicholas', 'Barger')
+    ];
+
+    return Promise.resolve(fakeItem);
   }
 
   private handleError(error: any) {
