@@ -1,3 +1,9 @@
 <p>
-  stock-page works!
+  <button class="btn btn-primary">Receive</button>
 </p>
+
+<inventory-stock-list (onSelected)="onItemSelected($event)"></inventory-stock-list>
+
+<side-panel [visible]="isDetailVisible" (onToggleVisibility)="toggleDetailVisibility($event)">
+  <inventory-stock-detail [id]="selectedItemId"></inventory-stock-detail>
+</side-panel>

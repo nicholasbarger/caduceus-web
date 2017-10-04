@@ -27,6 +27,8 @@ import { InventoryItemDetailComponent } from './inventory/inventory-item-detail/
 import { InventoryLocationListComponent } from './inventory/inventory-location-list/inventory-location-list.component';
 import { InventoryLocationsPageComponent } from './inventory/inventory-locations-page/inventory-locations-page.component';
 import { InventoryLocationService } from './inventory/inventory-location.service';
+import { InventoryStockListComponent } from './inventory/inventory-stock-list/inventory-stock-list.component';
+import { InventoryStockService } from './inventory/inventory-stock.service';
 import { InventorySubLocationListComponent } from './inventory/inventory-location-list/inventory-sub-location-list.component';
 import { MyWorkPageComponent } from './dashboard/my-work-page/my-work-page.component';
 import { NotFoundPageComponent } from './common/not-found-page/not-found-page.component';
@@ -43,8 +45,7 @@ import { WorkOrderService } from './work-orders/work-order.service';
 import { WorkOrdersCalendarPageComponent } from './work-orders/work-orders-calendar-page/work-orders-calendar-page.component';
 import { WorkOrdersPageComponent } from './work-orders/work-orders-page/work-orders-page.component';
 import { WorkOrderWorkflowComponent } from './work-orders/work-order-workflow/work-order-workflow.component';
-
-
+import { InventoryStockDetailComponent } from './inventory/inventory-stock-detail/inventory-stock-detail.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardPageComponent },
@@ -103,10 +104,13 @@ const appRoutes: Routes = [
     WorkOrderDetailComponent,
     WorkOrderWorkflowComponent,
     InventoryLocationListComponent,
+    InventoryStockListComponent,
+    InventoryStockDetailComponent,
   ],
   providers: [
     InventoryItemService,
     InventoryLocationService,
+    InventoryStockService,
     RoutingService,
     UnitOfMeasureService,
     WorkOrderService
