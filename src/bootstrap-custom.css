@@ -10,6 +10,14 @@ body {
     font-size: 1em;
     color: #949ba2;
 }
+.btn-default {
+    background-color: transparent;
+    border: 1px solid #979797;
+}
+.btn-default:hover {
+    background-color: #B6B6B6;
+    color: #fff;
+}
 .btn-primary {
     background-color: transparent;
     border: 1px solid #1D8BAC;

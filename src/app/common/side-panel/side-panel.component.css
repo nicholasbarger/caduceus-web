@@ -1,6 +1,6 @@
 section {
     width: 50%; 
-    position: absolute; 
+    position: fixed; 
     right: 0px; 
     top: 59px; 
     height: 100%; 
@@ -9,4 +9,5 @@ section {
     padding: 15px;
     box-shadow: -5px 0px 21px #161616;
     z-index: 1;
+    overflow-y: auto;
 }

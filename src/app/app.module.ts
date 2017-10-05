@@ -46,6 +46,7 @@ import { WorkOrdersCalendarPageComponent } from './work-orders/work-orders-calen
 import { WorkOrdersPageComponent } from './work-orders/work-orders-page/work-orders-page.component';
 import { WorkOrderWorkflowComponent } from './work-orders/work-order-workflow/work-order-workflow.component';
 import { InventoryStockDetailComponent } from './inventory/inventory-stock-detail/inventory-stock-detail.component';
+import { RoutingDetailPageComponent } from './manufacturing/routing-detail-page/routing-detail-page.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardPageComponent },
@@ -106,6 +107,7 @@ const appRoutes: Routes = [
     InventoryLocationListComponent,
     InventoryStockListComponent,
     InventoryStockDetailComponent,
+    RoutingDetailPageComponent,
   ],
   providers: [
     InventoryItemService,

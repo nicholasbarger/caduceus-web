@@ -16,10 +16,6 @@ export class ItemListComponent implements OnInit {
   constructor(private service: InventoryItemService) { }
 
   ngOnInit() {
-    this.getCollection();
-  }
-
-  getCollection(): void {
     var filter = null;
     this.service.getCollection(filter).then(response => this.items = response);
   }

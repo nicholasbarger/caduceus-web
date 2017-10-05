@@ -8,24 +8,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>ABC</td>
-      <td>Recipe #1</td>
-      <td>01/01/2017</td>
-      <td>01/01/2017</td>
+    <tr *ngFor="let item of list" (click)="select(item)">
+      <td>{{ item.code }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.created }}</td>
+      <td>{{ item.lastUpdated }}</td>
     </tr>
-    <tr>
-        <td>DCA</td>
-        <td>Recipe #2</td>
-        <td>01/01/2017</td>
-        <td>01/01/2017</td>
-      </tr>
-      <tr>
-          <td>ADC</td>
-          <td>Recipe #3</td>
-          <td>01/01/2017</td>
-          <td>01/01/2017</td>
-        </tr>
   </tbody>
-
 </table>

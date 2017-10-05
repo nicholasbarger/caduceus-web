@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-create-routing-form',
+  selector: 'create-routing-form',
   templateUrl: './create-routing-form.component.html',
   styleUrls: ['./create-routing-form.component.css']
 })

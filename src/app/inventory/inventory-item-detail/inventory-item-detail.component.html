@@ -83,7 +83,10 @@
             <span>$3.14</span><br>
         </div>
         <div id="routers" class="tab-pane">
-            <routing-list></routing-list>
+            <p>
+                <button class="btn btn-default" (click)="toggleCreateRoutingVisibility()">Create</button>
+            </p>
+            <routing-list (onSelected)="onRoutingSelected($event)"></routing-list>
         </div>
         <div id="boms" class="tab-pane">
             <p>Todo: list of boms.</p>
@@ -96,5 +99,13 @@
         </div>
     </div>
   </div>
+  
+  <side-panel [visible]="isCreateRoutingVisible" (onToggleVisibility)="toggleCreateRoutingVisibility($event)">
+    <create-routing-page></create-routing-page>
+  </side-panel>
+
+  <side-panel [visible]="isRoutingDetailVisible" (onToggleVisibility)="toggleRoutingDetailVisibilty($event)">
+      <routing-detail-page></routing-detail-page>
+  </side-panel>
   
   {{ model | json }}

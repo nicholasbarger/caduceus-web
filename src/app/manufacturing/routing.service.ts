@@ -2,15 +2,21 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { Routing } from './routing';
+import { RoutingListItem } from './routing-list/routing-list-item';
 import { RoutingSelectListItem } from './routing-select-list/routing-select-list-item';
 
 @Injectable()
 export class RoutingService {
   constructor(private http: Http) { }
 
-  getCollection(filter): Promise<Routing[]> {
-    // todo
-    return null;
+  getCollection(filter): Promise<RoutingListItem[]> {
+    var fakeData: RoutingListItem[] = [
+      new RoutingListItem(1, 'ABC', 'Recipe #1', new Date(), new Date()),
+      new RoutingListItem(1, 'DCA', 'Recipe #2', new Date(), new Date()),
+      new RoutingListItem(1, 'XYZ', 'Recipe #3', new Date(), new Date()),
+    ];
+
+    return Promise.resolve(fakeData);
   }
 
   getSelectListCollection(): Promise<RoutingSelectListItem[]> {
