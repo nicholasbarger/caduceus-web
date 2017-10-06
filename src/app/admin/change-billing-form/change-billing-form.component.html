@@ -40,14 +40,12 @@
 
     <div class="form-group">
         <label for="country">Country</label>
-        <input type="text" id="country" name="country" class="form-control"
-          [(ngModel)]="model.country" #country="ngModel">
+        <country-select-list name="country" [(ngModel)]="model.country"></country-select-list>
     </div>
 
     <div class="form-group">
         <label for="state">State</label>
-        <input type="text" id="state" name="state" class="form-control"
-          [(ngModel)]="model.state" #state="ngModel">
+        <state-select-list name="state" [(ngModel)]="model.state"></state-select-list>
     </div>
 
     <div class="form-group">
