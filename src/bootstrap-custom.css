@@ -18,6 +18,10 @@ body {
     background-color: #B6B6B6;
     color: #fff;
 }
+.btn-danger {
+    background-color: transparent;
+    border: 1px solid #dc3545;
+}
 .btn-primary {
     background-color: transparent;
     border: 1px solid #1D8BAC;

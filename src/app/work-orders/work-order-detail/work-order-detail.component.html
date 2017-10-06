@@ -1,4 +1,11 @@
 <div *ngIf="model">
+  <p>
+    <button class="btn btn-default">Edit</button>
+    <button class="btn btn-default">Work</button>
+    <button class="btn btn-default">Split</button>
+    <button class="btn btn-danger">Cancel</button>
+  </p>
+
   <h2>Work Order #{{ model.id }}</h2>
   <span class="badge">{{ model.status }}</span>
 

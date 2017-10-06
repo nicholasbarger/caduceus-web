@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { Routing } from './routing';
+import { RoutingDetail } from './routing-detail-page/routing-detail';
 import { RoutingListItem } from './routing-list/routing-list-item';
 import { RoutingSelectListItem } from './routing-select-list/routing-select-list-item';
+import { RoutingStepListItem } from './routing-detail-page/routing-step-list-item';
 
 @Injectable()
 export class RoutingService {
@@ -30,9 +32,21 @@ export class RoutingService {
     return Promise.resolve(fakeData);
   }
 
-  getSingle(id: number): Promise<Routing> {
-    // todo
-    return null;
+  getSingle(id: number): Promise<RoutingDetail> {
+    var fake: RoutingDetail = new RoutingDetail();
+    fake.code = 'ABC';
+    fake.name = 'Recipe #1';
+    fake.description = 'Some good tasting beer.';
+    fake.id = 1;
+    fake.inventoryItem = 'DaisyCutter';
+    fake.steps = [
+      new RoutingStepListItem(1, 'Prepping'),
+      new RoutingStepListItem(2, 'Mixing'),
+      new RoutingStepListItem(3, 'Heating'),
+      new RoutingStepListItem(4, 'Sterilization')
+    ];
+
+    return Promise.resolve(fake);
   }
 
   private handleError(error: any) {

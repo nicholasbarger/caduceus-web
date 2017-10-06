@@ -12,7 +12,7 @@ export class WorkOrderDetailComponent implements OnInit, OnChanges {
   @Input() id: number;
   model: WorkOrderDetail = null;
 
-  constructor(public service: WorkOrderService) { 
+  constructor(private service: WorkOrderService) { 
   }
 
   ngOnInit() {
