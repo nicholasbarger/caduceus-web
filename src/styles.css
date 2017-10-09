@@ -6,6 +6,12 @@
 .actions {    
 }
 
+.badge {
+    background-color:green;
+    font-size: 10pt;
+    vertical-align: text-top;
+}
+
 /* marketing section only to center content */
 .marketing-page {
     text-align: center;

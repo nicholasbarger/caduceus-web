@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { AuditListComponent } from './audit-list/audit-list.component';
@@ -14,6 +15,7 @@ import { StateSelectListComponent } from './state-select-list/state-select-list.
 
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     CommonModule,
     FormsModule
   ],

@@ -11,6 +11,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { CompanyFormComponent } from './company-form/company-form.component';
 import { ChangeBillingFormComponent } from './change-billing-form/change-billing-form.component';
 import { PastInvoicesListComponent } from './past-invoices-list/past-invoices-list.component';
+import { InviteUserFormComponent } from './invite-user-form/invite-user-form.component';
 
 const appRoutes: Routes = [
   { path: 'settings', component: SettingsPageComponent }
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     UserListComponent,
     CompanyFormComponent,
     ChangeBillingFormComponent,
-    PastInvoicesListComponent
+    PastInvoicesListComponent,
+    InviteUserFormComponent
   ],
   exports: [
   ],
