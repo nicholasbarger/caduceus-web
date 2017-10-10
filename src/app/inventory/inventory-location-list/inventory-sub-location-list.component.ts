@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { InventoryLocationListItem } from './inventory-location-list-item';
 
 @Component({
@@ -8,10 +8,14 @@ import { InventoryLocationListItem } from './inventory-location-list-item';
 })
 export class InventorySubLocationListComponent implements OnInit {
   @Input() subLocations: InventoryLocationListItem[] = null;
+  @Output() onSelected = new EventEmitter<InventoryLocationListItem>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  select(location: InventoryLocationListItem): void {
+    this.onSelected.emit(location);
+  }
 }

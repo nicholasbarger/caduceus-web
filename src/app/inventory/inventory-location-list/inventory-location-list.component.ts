@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 import { InventoryLocationListItem } from './inventory-location-list-item';
 import { InventoryLocationService } from '../inventory-location.service';
 
@@ -8,6 +9,8 @@ import { InventoryLocationService } from '../inventory-location.service';
   styleUrls: ['./inventory-location-list.component.css']
 })
 export class InventoryLocationListComponent implements OnInit {
+  @Output() onSelected = new EventEmitter<InventoryLocationListItem>();
+  
   locations: InventoryLocationListItem[] = null;
 
   constructor(public service: InventoryLocationService) { }
@@ -16,4 +19,7 @@ export class InventoryLocationListComponent implements OnInit {
     this.service.getCollection(null).then(data => this.locations = data);
   }
 
+  select(location: InventoryLocationListItem): void {
+    this.onSelected.emit(location);
+  }
 }

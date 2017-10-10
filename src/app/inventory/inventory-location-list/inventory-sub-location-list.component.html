@@ -1,6 +1,6 @@
 <ul>
     <li *ngFor="let subLocation of subLocations">
-        {{ subLocation.name }}
-        <inventory-sub-location-list [subLocations]="subLocation.subLocations"></inventory-sub-location-list>
+        <a (click)="select(subLocation)">{{ subLocation.name }}</a>
+        <inventory-sub-location-list [subLocations]="subLocation.subLocations" (onSelected)="select($event)"></inventory-sub-location-list>
     </li>
 </ul>
