@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" routerLink="/" routerLinkActive="active">
     Made
     <span class="version">v.1.0</span>
   </a>
@@ -9,31 +9,31 @@
 
   <div class="collapse navbar-collapse" id="navbarContent">
     <ul class="navbar-nav mr-auto" style="display: none">
-      <li class="nav-item"><a href="features" class="nav-link">Features</a></li>
-      <li class="nav-item"><a href="pricing" class="nav-link">Pricing</a></li>
-      <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
-      <li class="nav-item"><a href="signup" class="nav-link">Try for Free</a></li>
+      <li class="nav-item" routerLinkActive="active"><a routerLink="/features" class="nav-link">Features</a></li>
+      <li class="nav-item" routerLinkActive="active"><a routerLink="/pricing" class="nav-link">Pricing</a></li>
+      <li class="nav-item" routerLinkActive="active"><a routerLink="/login" class="nav-link">Login</a></li>
+      <li class="nav-item" routerLinkActive="active"><a routerLink="/signup" class="nav-link">Try for Free</a></li>
     </ul>
 
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a href="my-work" class="nav-link active">My Work</a></li>
-      <li class="nav-item"><a href="dashboard" class="nav-link">Dashboard</a></li>
-      <li class="nav-item dropdown">
+      <li class="nav-item" routerLinkActive="active"><a routerLink="/my-work" class="nav-link">My Work</a></li>
+      <li class="nav-item" routerLinkActive="active"><a routerLink="/dashboard" class="nav-link">Dashboard</a></li>
+      <li class="nav-item dropdown" routerLinkActive="active">
         <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inventory <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="nav-item"><a href="inventory/items" class="nav-link">Items</a></li>
-          <li class="nav-item"><a href="inventory/locations" class="nav-link">Locations</a></li>
-          <li class="nav-item"><a href="inventory/stock" class="nav-link">Stock</a></li>
+          <li class="nav-item"><a routerLink="/inventory/items" class="nav-link">Items</a></li>
+          <li class="nav-item"><a routerLink="/inventory/locations" class="nav-link">Locations</a></li>
+          <li class="nav-item"><a routerLink="/inventory/stock" class="nav-link">Stock</a></li>
         </ul>  
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" routerLinkActive="active">
         <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Work Orders <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="nav-item"><a href="work-orders/calendar" class="nav-link">Calendar</a></li>
-          <li class="nav-item"><a href="work-orders" class="nav-link">List</a></li>
+          <li class="nav-item"><a routerLink="/work-orders/calendar" class="nav-link">Calendar</a></li>
+          <li class="nav-item"><a routerLink="/work-orders" class="nav-link">List</a></li>
         </ul>
       </li>
-      <li class="nav-item"><a href="settings" class="nav-link">Settings</a></li>
+      <li class="nav-item" routerLinkActive="active"><a routerLink="/settings" class="nav-link">Settings</a></li>
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
@@ -41,6 +41,6 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 
-    <a href="profile"><img src="assets/profile-sm.jpg" class="profile rounded-circle" alt="Profile"></a>
+    <a routerLink="/profile"><img src="assets/profile-sm.jpg" class="profile rounded-circle" alt="Profile"></a>
   </div>
 </nav>

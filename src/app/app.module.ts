@@ -76,9 +76,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     MarketingModule,
-    RouterModule.forRoot(appRoutes),
-
-      // must be last because of wildcard catch all in routes
+    RouterModule.forRoot(appRoutes)
   ],
   declarations: [
     AppComponent,

@@ -25,7 +25,7 @@ form .form-control, form .btn {
 .nav-link {
     color: #6E6E6E;
 }
-.nav-link.active {
+li.active > .nav-link {
     border-bottom: 2px solid orange;
 }
 

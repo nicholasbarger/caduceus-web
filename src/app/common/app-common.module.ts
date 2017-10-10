@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AuditListComponent } from './audit-list/audit-list.component';
 import { CountrySelectListComponent } from './country-select-list/country-select-list.component';
@@ -17,7 +18,8 @@ import { StateSelectListComponent } from './state-select-list/state-select-list.
   imports: [
     BrowserAnimationsModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   declarations: [
     NavigationComponent,

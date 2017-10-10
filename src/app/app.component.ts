@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Project Caduceus';
+  title: string = 'Project Caduceus';
+  selectedNav: string;
 }
