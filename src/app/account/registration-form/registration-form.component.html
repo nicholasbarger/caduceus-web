@@ -1,5 +1,13 @@
   <form #registrationForm="ngForm" (ngSubmit)="register()">
       <div class="form-group">
+        <label for="organizationName">Organization Name</label>
+        <input type="text" class="form-control" id="organizationName" autofocus 
+            required [(ngModel)]="model.organizationName" name="organizationName" #username="ngModel">
+        <div [hidden]="organizationName.valid || organizationName.pristine" class="alert alert-danger">
+            Organization name is required
+        </div>
+      </div>
+      <div class="form-group">
           <label for="username">Email</label>
           <input type="email" class="form-control" id="username" autofocus 
               required [(ngModel)]="model.username" name="username" #username="ngModel">

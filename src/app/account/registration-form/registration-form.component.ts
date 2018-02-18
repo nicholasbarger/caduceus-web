@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationForm } from './registration-form';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'registration-form',
@@ -10,9 +11,13 @@ export class RegistrationFormComponent implements OnInit {
 
   model: RegistrationForm = new RegistrationForm();
 
-  constructor() { }
+  constructor(private service: AccountService) { }
 
   ngOnInit() {
+  }
+
+  register(): void {
+    // todo: call service to register new user
   }
 
 }
