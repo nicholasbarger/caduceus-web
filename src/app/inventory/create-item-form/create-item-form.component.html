@@ -48,6 +48,9 @@
         <label for="unitOfMeasure">Unit Of Measure</label>
         <unit-of-measure-select-list name="unitOfMeasureId" [(ngModel)]="model.unitOfMeasureId"></unit-of-measure-select-list>
     </div>
+
+    <button type="button" class="btn btn-default">Cancel</button>
+    <button type="submit" class="btn btn-primary">Save</button>
   </form>
   
   <pre>{{ model | json }}</pre>

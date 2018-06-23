@@ -2,6 +2,10 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "./bootstrap-custom.css";
 
+a {
+    color: #23add9;
+}
+
 /* action button/menu items */
 .actions {    
 }

@@ -9,6 +9,7 @@ body {
 .btn {
     font-size: 1em;
     color: #949ba2;
+    margin-right: 5px;
 }
 .btn-default {
     background-color: transparent;
@@ -105,6 +106,13 @@ h3 {
 }
 
 /* tabs */
+.nav-tabs .nav-link.active, .nav-tabs .nav-link.active:hover {
+    background-color: #1D8BAC;
+    color: #fff;
+}
+.nav-tabs .nav-link:hover {
+    color: #23add9;
+}
 .tab-content {
     padding-top: 15px;
     padding-bottom: 15px;

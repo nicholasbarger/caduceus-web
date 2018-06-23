@@ -3,6 +3,7 @@
         <button class="btn btn-default">Edit</button>
         <button class="btn btn-default">Build</button>
         <button class="btn btn-default">Buy</button>
+        <button class="btn btn-default">Print</button>
         <button class="btn btn-danger">Disable</button>
     </p>
 
@@ -60,6 +61,9 @@
             <a class="nav-link active" href="" data-toggle="tab" data-target="#stats">Stats</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#vendors">Vendors</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="" data-toggle="tab" data-target="#routers">Routers</a>
         </li>
         <li class="nav-item">
@@ -67,6 +71,9 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="" data-toggle="tab" data-target="#work-orders">Work Orders</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#media">Media</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="" data-toggle="tab" data-target="#activity">Activity</a>
@@ -95,6 +102,9 @@
             <label for="cost">Cost per Unit:</label>
             <span>$3.14</span><br>
         </div>
+        <div id="vendors" class="tab-pane">
+            <p class="todo">Vendor list component should go here</p>
+        </div>
         <div id="routers" class="tab-pane">
             <p>
                 <button class="btn btn-default" (click)="toggleCreateRoutingVisibility()">Create</button>
@@ -102,10 +112,13 @@
             <routing-list (onSelected)="onRoutingSelected($event)"></routing-list>
         </div>
         <div id="boms" class="tab-pane">
-            <p>Todo: list of boms.</p>
+            <p class="todo">Todo: list of boms.</p>
         </div>
         <div id="work-orders" class="tab-pane">
             <work-order-list></work-order-list>
+        </div>
+        <div id="media" class="tab-pane">
+            <p class="todo">A list of images and video would go here.</p>
         </div>
         <div id="activity" class="tab-pane">
             <audit-list [list]="model.activity"></audit-list>

@@ -12,6 +12,7 @@ import { CompanyFormComponent } from './company-form/company-form.component';
 import { ChangeBillingFormComponent } from './change-billing-form/change-billing-form.component';
 import { PastInvoicesListComponent } from './past-invoices-list/past-invoices-list.component';
 import { InviteUserFormComponent } from './invite-user-form/invite-user-form.component';
+import { UserService } from './user.service';
 
 const appRoutes: Routes = [
   { path: 'settings', component: SettingsPageComponent }
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
   exports: [
   ],
   providers: [
+    UserService
   ]
 })
 export class AdminModule { }

@@ -10,6 +10,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
+import { AccountService } from './account.service';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginPageComponent },
@@ -34,6 +35,9 @@ const appRoutes: Routes = [
   ],
   exports: [
     LoginFormComponent
+  ],
+  providers: [
+    AccountService
   ]
 })
 export class AccountModule { }
