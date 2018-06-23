@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppCommonModule } from './common/app-common.module';
 import { AccountModule } from './account/account.module';
 import { AdminModule } from './admin/admin.module';
-import { CalendarModule } from 'ap-angular2-fullcalendar';
+import { FullCalendarModule } from 'ng-fullcalendar';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { MarketingModule } from './marketing/marketing.module';
 
@@ -73,7 +73,7 @@ const appRoutes: Routes = [
     AppCommonModule,
     BrowserModule,
     BrowserAnimationsModule,
-    CalendarModule,
+    FullCalendarModule,
     ChartsModule,
     CommonModule,
     FormsModule,
