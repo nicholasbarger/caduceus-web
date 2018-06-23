@@ -4,10 +4,10 @@
 
 <inventory-item-list (onSelected)="onItemSelected($event)"></inventory-item-list>
 
-<side-panel [visible]="isCreateVisible" (onToggleVisibility)="toggleCreateVisibility($event)">
+<side-panel name="itemCreate" [visible]="isCreateVisible" (onToggleVisibility)="toggleCreateVisibility($event)">
   <create-inventory-item-page></create-inventory-item-page>
 </side-panel>
 
-<side-panel [visible]="isDetailVisible" (onToggleVisibility)="toggleDetailVisibility($event)">
+<side-panel name="itemDetail" [visible]="isDetailVisible" (onToggleVisibility)="toggleDetailVisibility($event)">
   <inventory-item-detail [id]="selectedItemId"></inventory-item-detail>
 </side-panel>

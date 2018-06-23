@@ -1,22 +1,42 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { Component, EventEmitter, Input, OnInit, Output, ElementRef } from '@angular/core';
+import { trigger, transition, animate, state, style } from '@angular/animations';
 
 @Component({
   selector: 'side-panel',
   templateUrl: './side-panel.component.html',
-  styleUrls: ['./side-panel.component.css']
+  styleUrls: ['./side-panel.component.css'],
+  animations: [
+    trigger('slideInOut', [
+      state('in', style({transform: 'translateX(-100%)'})),
+      transition(':enter', [
+        style({transform: 'translateX(-100%)'}),
+        animate(200, style({transform: 'translateX(0%)'}))
+      ]),
+      transition(':leave', [
+        animate(200, style({transform: 'translateX(-100%)'}))
+      ])
+    ])
+  ]
 })
 export class SidePanelComponent implements OnInit {
   @Input() visible: boolean;
+  @Input() name: string;
   @Output() onToggleVisibility = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(el: ElementRef) { }
 
   ngOnInit() {
   }
 
   toggleVisibility(): void {
+    // animate
+    // var animation = this.visible ? 'slideInRight' : 'slideOutRight';
+    // $(this.name).addClass(animation);
+
+    // toggle
     this.visible = !this.visible;
+
+    // emit
     this.onToggleVisibility.emit(this.visible);
   }
 }

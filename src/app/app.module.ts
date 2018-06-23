@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppCommonModule } from './common/app-common.module';
 import { AccountModule } from './account/account.module';
@@ -70,10 +71,11 @@ const appRoutes: Routes = [
     AccountModule,
     AdminModule,
     AppCommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     CalendarModule,
     ChartsModule,
     CommonModule,
-    BrowserModule,
     FormsModule,
     MarketingModule,
     RouterModule.forRoot(appRoutes)
