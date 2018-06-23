@@ -7,13 +7,13 @@ import { trigger, transition, animate, state, style } from '@angular/animations'
   styleUrls: ['./side-panel.component.css'],
   animations: [
     trigger('slideInOut', [
-      state('in', style({transform: 'translateX(-100%)'})),
+      state('in', style({transform: 'translateX(100%)'})),
       transition(':enter', [
-        style({transform: 'translateX(-100%)'}),
+        style({transform: 'translateX(100%)'}),
         animate(200, style({transform: 'translateX(0%)'}))
       ]),
       transition(':leave', [
-        animate(200, style({transform: 'translateX(-100%)'}))
+        animate(200, style({transform: 'translateX(100%)'}))
       ])
     ])
   ]
@@ -29,10 +29,6 @@ export class SidePanelComponent implements OnInit {
   }
 
   toggleVisibility(): void {
-    // animate
-    // var animation = this.visible ? 'slideInRight' : 'slideOutRight';
-    // $(this.name).addClass(animation);
-
     // toggle
     this.visible = !this.visible;
 
