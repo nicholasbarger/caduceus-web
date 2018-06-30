@@ -9,9 +9,9 @@ import { InventoryItemService } from '../inventory-item.service';
   styleUrls: ['./create-item-form.component.css']
 })
 export class CreateItemFormComponent implements OnInit {
-  public model: CreateInventoryItem = new CreateInventoryItem();
+  model: CreateInventoryItem = new CreateInventoryItem();
 
-  constructor(public service: InventoryItemService) { }
+  constructor(private service: InventoryItemService) { }
 
   ngOnInit() {
   }

@@ -16,6 +16,10 @@ a {
     vertical-align: text-top;
 }
 
+label {
+    margin-right: 5px;
+}
+
 /* marketing section only to center content */
 .marketing-page {
     text-align: center;

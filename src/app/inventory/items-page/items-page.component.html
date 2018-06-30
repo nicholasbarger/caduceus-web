@@ -1,6 +1,6 @@
 <h1>Manage Items</h1>
 <p>
-    <button type="button" (click)="toggleCreateVisibility()" class="btn btn-primary">Create Item</button>
+    <button type="button" (click)="toggleCreateVisibility()" class="btn btn-primary">Create</button>
     <button type="button" class="btn btn-default">Import</button>
     <button type="button" class="btn btn-default">Export</button>
     <button type="button" class="btn btn-default">Print</button>
@@ -15,3 +15,6 @@
 <side-panel name="itemDetail" [visible]="isDetailVisible" (onToggleVisibility)="toggleDetailVisibility($event)">
   <inventory-item-detail [id]="selectedItemId"></inventory-item-detail>
 </side-panel>
+
+{{ selectedItemId | json }}
+{{ isDetailVisible | json }}

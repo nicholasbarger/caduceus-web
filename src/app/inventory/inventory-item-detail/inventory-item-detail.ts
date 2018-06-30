@@ -13,8 +13,9 @@ export class InventoryItemDetail {
         public unitOfMeasure: string = null,
         public weight: number = null,
         public width: number = null,
-        public activity: AuditEntryListItem[] = null
-    ) {        
+        public activity: AuditEntryListItem[] = null,
+        public isForSale: boolean = true
+    ) {
     }
     
 }

@@ -3,6 +3,8 @@
         <button class="btn btn-default">Edit</button>
         <button class="btn btn-default">Build</button>
         <button class="btn btn-default">Buy</button>
+        <button class="btn btn-default">Quote</button>
+        <button class="btn btn-default">Sell</button>
         <button class="btn btn-default">Print</button>
         <button class="btn btn-danger">Disable</button>
     </p>
@@ -56,6 +58,20 @@
         <span id="description" class="form-control">{{ model.description }}</span>
     </div>
 
+    <div class="form-group">
+        <label class="checkbox"><input type="checkbox" class="checkbox" [(ngModel)]="model.isForSale" disabled> Is For Sale</label>
+    </div>
+
+    <section *ngIf="model.isForSale">
+        <div class="form-group">
+            <label class="checkbox"><input type="checkbox" class="checkbox" [(ngModel)]="model.allowBackorders" disabled> Allow Backorders</label>
+        </div>
+    </section>
+
+    <div class="form-group">
+        <label class="checkbox"><input type="checkbox" class="checkbox" [(ngModel)]="model.isManufacturable" disabled> Is Manufacturable</label>
+    </div>
+
     <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link active" href="" data-toggle="tab" data-target="#stats">Stats</a>
@@ -73,41 +89,57 @@
             <a class="nav-link" href="" data-toggle="tab" data-target="#work-orders">Work Orders</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#stock">Stock</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="" data-toggle="tab" data-target="#media">Media</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab" data-target="#categories">Categories</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="" data-toggle="tab" data-target="#catalogs">Catalogs</a>
+            </li>
         <li class="nav-item">
             <a class="nav-link" href="" data-toggle="tab" data-target="#activity">Activity</a>
         </li>
     </ul>
     <div class="tab-content">
         <div id="stats" class="tab-pane active">
+            
             <label for="ontime">On-Time Delivery:</label>
-            <span>95%</span><br>
+            <span class="form-control">95%</span><br>
 
             <label for="cycletime">Cycle Time:</label>
-            <span>13 hours</span><br>
+            <span class="form-control">13 hours</span><br>
 
             <label for="changeovertime">Changeover Time:</label>
-            <span>3 hours</span><br>
+            <span class="form-control">3 hours</span><br>
 
             <label for="yield">Yield:</label>
-            <span>98%</span><br>
+            <span class="form-control">98%</span><br>
 
             <label for="returns">Customer Returns:</label>
-            <span>1.5% (13)</span><br>
+            <span class="form-control">1.5% (13)</span><br>
 
             <label for="incidents">Safety Incidents:</label>
-            <span>3</span><br>
+            <span class="form-control">3</span><br>
 
             <label for="cost">Cost per Unit:</label>
-            <span>$3.14</span><br>
+            <span class="form-control">$3.14</span><br>
         </div>
         <div id="vendors" class="tab-pane">
-            <p class="todo">Vendor list component should go here</p>
+            <p>
+                <button class="btn btn-primary" (click)="toggleCreateVendorVisibility()">Create</button>
+            </p>
+            <vendor-list (onSelected)="onVendorSelected($event)"></vendor-list>
         </div>
         <div id="routers" class="tab-pane">
             <p>
-                <button class="btn btn-default" (click)="toggleCreateRoutingVisibility()">Create</button>
+                <button class="btn btn-primary" (click)="toggleCreateRoutingVisibility()">Create</button>
             </p>
             <routing-list (onSelected)="onRoutingSelected($event)"></routing-list>
         </div>
@@ -115,10 +147,25 @@
             <p class="todo">Todo: list of boms.</p>
         </div>
         <div id="work-orders" class="tab-pane">
-            <work-order-list></work-order-list>
+            <p>
+                <button class="btn btn-primary" (click)="toggleCreateWorkOrderVisibility()">Create</button>
+            </p>
+            <work-order-list (onSelected)="onWorkOrderSelected($event)"></work-order-list>
+        </div>
+        <div id="pricing" class="tab-pane">
+            <p class="todo">Pricing matrix goes here.</p>
+        </div>
+        <div id="stock" class="tab-pane">
+            <inventory-stock-list (onSelected)="onInventoryStockSelected($event)"></inventory-stock-list>
         </div>
         <div id="media" class="tab-pane">
             <p class="todo">A list of images and video would go here.</p>
+        </div>
+        <div id="categories" class="tab-pane">
+            <p class="todo">A list of categories.</p>
+        </div>
+        <div id="catalogs" class="tab-pane">
+            <p class="todo">A list of catalogs.</p>
         </div>
         <div id="activity" class="tab-pane">
             <audit-list [list]="model.activity"></audit-list>
@@ -130,8 +177,28 @@
     <create-routing-page></create-routing-page>
   </side-panel>
 
-  <side-panel [visible]="isRoutingDetailVisible" (onToggleVisibility)="toggleRoutingDetailVisibilty($event)">
+  <side-panel [visible]="isRoutingDetailVisible" (onToggleVisibility)="toggleRoutingDetailVisibility($event)">
       <routing-detail-page></routing-detail-page>
+  </side-panel>
+
+  <side-panel [visible]="isCreateVendorVisible" (onToggleVisibility)="toggleCreateVendorVisibility($event)">
+      <create-vendor-page></create-vendor-page>
+  </side-panel>
+
+  <side-panel [visible]="isVendorDetailVisible" (onToggleVisibilty)="toggleVendorDetailVisibility($event)">
+      <vendor-detail></vendor-detail>
+  </side-panel>
+
+  <side-panel [visible]="isCreateWorkOrderVisible" (onToggleVisibility)="toggleCreateWorkOrderVisibility($event)">
+      <create-work-order-page></create-work-order-page>
+  </side-panel>
+
+  <side-panel [visible]="isWorkOrderDetailVisible" (onToggleVisibility)="toggleWorkOrderDetailVisibility($event)">
+      <work-order-detail></work-order-detail>
+  </side-panel>
+
+  <side-panel [visible]="isInventoryStockDetailVisible" (onToggleVisibility)="toggleInventoryStockDetailVisibility($event)">
+      <inventory-stock-detail></inventory-stock-detail>
   </side-panel>
   
   <pre>{{ model | json }}</pre>

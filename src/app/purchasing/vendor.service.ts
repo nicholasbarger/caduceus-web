@@ -4,6 +4,7 @@ import { Http } from '@angular/http';
 import { AuditEntryListItem } from '../common/audit-list/audit-entry-list-item';
 import { SelectListItem } from '../common/select-list/select-list-item';
 import { VendorListItem } from './vendor-list/vendor-list-item';
+import { VendorDetail } from './vendor-detail/vendor-detail';
 
 @Injectable()
 export class VendorService {
@@ -36,25 +37,23 @@ export class VendorService {
     return Promise.resolve(fakeData);
   }
 
-  // getSingle(id: number): Promise<VendorDetail> {
-  //   // return this.http.get(this.apiUrl + '/' + id)
-  //   //   .toPromise()
-  //   //   .then(response => response.json() as InventoryItem)
-  //   //   .catch(this.handleError);
+  getSingle(id: number): Promise<VendorDetail> {
+    // return this.http.get(this.apiUrl + '/' + id)
+    //   .toPromise()
+    //   .then(response => response.json() as InventoryItem)
+    //   .catch(this.handleError);
 
-  //   var fakeItem = new VendorDetail(
-  //     '1001', 'DC2016', 'Daisy Cutter high grain alcohol', 10, 5, 'DaisyCutter', '1',
-  //     'Active', 'EA', 16, 15);
+    var fakeItem = new VendorDetail('1', 'Acme', 'This vendor sometimes runs 1-2 days later on arrivals.', 'Active');
 
-  //   fakeItem.activity = [
-  //     new AuditEntryListItem('Created', 'DaisyCutter was initially created.', new Date(), 'nbarger', 'Nicholas', 'Barger'),
-  //     new AuditEntryListItem('Updated', 'DaisyCutter was updated.', new Date(), 'nbarger', 'Nicholas', 'Barger'),
-  //     new AuditEntryListItem('Approved', 'DaisyCutter was approved.', new Date(), 'kbarger', 'Kaitlyn', 'Barger'),
-  //     new AuditEntryListItem('Manufactured', 'DaisyCutter was manufactured through Work Order #2001.', new Date(), 'nbarger', 'Nicholas', 'Barger')
-  //   ];
+    fakeItem.activity = [
+      new AuditEntryListItem('Created', 'DaisyCutter was initially created.', new Date(), 'nbarger', 'Nicholas', 'Barger'),
+      new AuditEntryListItem('Updated', 'DaisyCutter was updated.', new Date(), 'nbarger', 'Nicholas', 'Barger'),
+      new AuditEntryListItem('Approved', 'DaisyCutter was approved.', new Date(), 'kbarger', 'Kaitlyn', 'Barger'),
+      new AuditEntryListItem('Manufactured', 'DaisyCutter was manufactured through Work Order #2001.', new Date(), 'nbarger', 'Nicholas', 'Barger')
+    ];
 
-  //   return Promise.resolve(fakeItem);
-  // }
+    return Promise.resolve(fakeItem);
+  }
 
   private handleError(error: any) {
     console.error('An error occurred: ' + error);  // todo: replace with real error handling (and centralize)

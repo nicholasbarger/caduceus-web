@@ -52,14 +52,31 @@ import { InventoryLocationDetailComponent } from './inventory/inventory-location
 import { CreateInventoryLocationPageComponent } from './inventory/create-inventory-location-page/create-inventory-location-page.component';
 import { CreateInventoryLocationFormComponent } from './inventory/create-inventory-location-form/create-inventory-location-form.component';
 
+import { VendorsPageComponent } from './purchasing/vendors-page/vendors-page.component';
+import { VendorListComponent } from './purchasing/vendor-list/vendor-list.component';
+import { VendorService } from './purchasing/vendor.service';
+import { VendorDetailComponent } from './purchasing/vendor-detail/vendor-detail.component';
+import { CreateVendorPageComponent } from './purchasing/create-vendor-page/create-vendor-page.component';
+import { CreateVendorFormComponent } from './purchasing/create-vendor-form/create-vendor-form.component';
+import { PurchaseOrdersPageComponent } from './purchasing/purchase-orders-page/purchase-orders-page.component';
+import { PurchaseOrderListComponent } from './purchasing/purchase-order-list/purchase-order-list.component';
+import { CreatePurchaseOrderPageComponent } from './purchasing/create-purchase-order-page/create-purchase-order-page.component';
+import { PurchaseOrderDetailComponent } from './purchasing/purchase-order-detail/purchase-order-detail.component';
+
+
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardPageComponent },
   { path: 'inventory', component: InventoryItemsPageComponent },
   { path: 'inventory/items', component: InventoryItemsPageComponent },
+  { path: 'inventory/items/:id', component: InventoryItemsPageComponent },
   { path: 'inventory/items/create', component: CreateInventoryItemPageComponent },
   { path: 'inventory/locations', component: InventoryLocationsPageComponent },
   { path: 'inventory/stock', component: StockPageComponent },
   { path: 'my-work', component: MyWorkPageComponent },
+  { path: 'purchasing/purchase-orders', component: PurchaseOrdersPageComponent },
+  { path: 'purchasing/purchase-orders/:id', component: PurchaseOrdersPageComponent },
+  { path: 'purchasing/vendors', component: VendorsPageComponent },
+  { path: 'purchasing/vendors/:id', component: VendorsPageComponent },
   { path: 'work-orders', component: WorkOrdersPageComponent },
   { path: 'work-orders/calendar', component: WorkOrdersCalendarPageComponent },
   { path: 'work-orders/create', component: CreateWorkOrderPageComponent },
@@ -114,6 +131,15 @@ const appRoutes: Routes = [
     InventoryLocationDetailComponent,
     CreateInventoryLocationPageComponent,
     CreateInventoryLocationFormComponent,
+    VendorListComponent,
+    VendorsPageComponent,
+    VendorDetailComponent,
+    CreateVendorPageComponent,
+    CreateVendorFormComponent,
+    PurchaseOrdersPageComponent,
+    PurchaseOrderListComponent,
+    CreatePurchaseOrderPageComponent,
+    PurchaseOrderDetailComponent
   ],
   providers: [
     InventoryItemService,
@@ -121,6 +147,7 @@ const appRoutes: Routes = [
     InventoryStockService,
     RoutingService,
     UnitOfMeasureService,
+    VendorService,
     WorkOrderService
   ],
   bootstrap: [AppComponent]

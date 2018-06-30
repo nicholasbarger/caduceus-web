@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InventoryItemListItem } from '../item-list/inventory-item-list-item';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'inventory-items-page',
@@ -12,14 +13,19 @@ export class InventoryItemsPageComponent implements OnInit {
   isDetailVisible: boolean = false;
   selectedItemId: number;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      if (params.id) {  
+        this.selectedItemId = params.id;
+        this.isDetailVisible = true;
+      }
+    });
   }
 
   onItemSelected(item: InventoryItemListItem): void {
-    this.selectedItemId = item.id;
-    this.isDetailVisible = true;
+    this.router.navigate(['/inventory/items', item.id]);
   }
   
   toggleCreateVisibility(): void {

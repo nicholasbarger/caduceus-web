@@ -1,5 +1,5 @@
 section {
-    width: 50%; 
+    width: 95%;
     position: fixed; 
     right: 0px; 
     top: 59px; 
@@ -10,4 +10,10 @@ section {
     box-shadow: -5px 0px 21px #161616;
     z-index: 1;
     overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+    section {
+        width: 50%; 
+    }
 }
