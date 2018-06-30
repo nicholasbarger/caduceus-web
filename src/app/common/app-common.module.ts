@@ -13,6 +13,7 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 import { StateService } from './state.service';
 
 import { StateSelectListComponent } from './state-select-list/state-select-list.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   imports: [
@@ -27,10 +28,12 @@ import { StateSelectListComponent } from './state-select-list/state-select-list.
     SidePanelComponent,
     AuditListComponent,
     CountrySelectListComponent,
-    StateSelectListComponent
+    StateSelectListComponent,
+    GridComponent
   ],
   exports: [
     AuditListComponent,
+    GridComponent,
     NavigationComponent,
     SelectListComponent,
     SidePanelComponent,
