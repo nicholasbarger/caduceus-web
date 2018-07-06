@@ -1,6 +1,6 @@
 import { BillOfMaterial } from '../manufacturing/bill-of-material';
 import { DomainModel } from '../common/domain-model';
-import { InventoryItem } from '../inventory/inventory-item';
+import { InventoryItem } from '../inventory/inventory-items/inventory-item';
 import { Routing } from '../manufacturing/routing';
 import { WorkOrderStatus } from './work-order-status';
 import { WorkOrderStep } from './work-order-step';

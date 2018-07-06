@@ -1,4 +1,4 @@
-import { InventoryItem } from '../inventory/inventory-item';
+import { InventoryItem } from '../inventory/inventory-items/inventory-item';
 
 export class BillOfMaterial {
     constructor(

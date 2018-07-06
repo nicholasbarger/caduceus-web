@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
-import { AuditEntryListItem } from '../common/audit-list/audit-entry-list-item';
-import { InventoryItem } from './inventory-item';
+import { AuditEntryListItem } from '../../common/audit-list/audit-entry-list-item';
 import { InventoryItemDetail } from './inventory-item-detail/inventory-item-detail';
-import { InventoryItemListItem } from './item-list/inventory-item-list-item';
-import { SelectListItem } from '../common/select-list/select-list-item';
+import { InventoryItemListItem } from './inventory-item-list/inventory-item-list-item';
+import { SelectListItem } from '../../common/select-list/select-list-item';
 
 @Injectable()
 export class InventoryItemService {

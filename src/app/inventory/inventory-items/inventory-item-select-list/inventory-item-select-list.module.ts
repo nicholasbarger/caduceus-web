@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InventoryItemSelectListComponent } from './inventory-item-select-list.component';
-import { AppCommonModule } from '../../common/app-common.module';
+import { AppCommonModule } from '../../../common/app-common.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

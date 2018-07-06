@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateWorkOrderFormComponent } from '../create-work-order-form/create-work-order-form.component';
 import { CreateWorkOrderPageComponent } from './create-work-order-page.component';
 import { FormsModule } from '@angular/forms';
-import { InventoryItemSelectListModule } from '../../inventory/inventory-item-select-list/inventory-item-select-list.module';
 import { RoutingSelectListModule } from '../../manufacturing/routing-select-list/routing-select-list.module';
 import { WorkOrderService } from '../work-order.service';
+import { InventoryItemSelectListModule } from '../../inventory/inventory-items/inventory-item-select-list/inventory-item-select-list.module';
 
 const appRoutes: Routes = [
   { path: 'work-orders/create', component: CreateWorkOrderPageComponent }

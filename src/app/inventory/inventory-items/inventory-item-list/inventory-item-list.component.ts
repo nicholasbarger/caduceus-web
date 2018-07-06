@@ -5,10 +5,10 @@ import { InventoryItemService } from '../inventory-item.service'
 
 @Component({
   selector: 'inventory-item-list',
-  templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.css']
+  templateUrl: './inventory-item-list.component.html',
+  styleUrls: ['./inventory-item-list.component.css']
 })
-export class ItemListComponent implements OnInit {
+export class InventoryItemListComponent implements OnInit {
   @Output() onSelected = new EventEmitter<InventoryItemListItem>();
 
   items: InventoryItemListItem[];

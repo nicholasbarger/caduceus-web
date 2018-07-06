@@ -34,10 +34,13 @@
   </ul>
   <div class="tab-content">
       <div id="orders" class="tab-pane active">
-          <p class="todo">List of purchase orders</p>
+          <p>
+              <button class="btn btn-primary" (click)="toggleCreatePurchaseOrderVisibility()">Create</button>
+          </p>
+          <purchase-order-list (onSelected)="onPurchaseOrderSelected($event)"></purchase-order-list>
       </div>
       <div id="items" class="tab-pane">
-          <p class="todo">List of items this vendor sells</p>
+          <inventory-item-list></inventory-item-list>
       </div>
       <div id="contacts" class="tab-pane">
           <p>
@@ -51,11 +54,11 @@
   </div>
 </div>
 
-<side-panel [visible]="isCreatePurchasingOrderVisible" (onToggleVisibility)="toggleCreatePurchasingOrderVisibility($event)">
+<side-panel [visible]="isCreatePurchasingOrderVisible" (onToggleVisibility)="toggleCreatePurchaseOrderVisibility($event)">
   <create-purchase-order-page></create-purchase-order-page>
 </side-panel>
 
-<side-panel [visible]="isPurchasingOrderDetailVisible" (onToggleVisibility)="togglePurchasingOrderDetailVisibility($event)">
+<side-panel [visible]="isPurchasingOrderDetailVisible" (onToggleVisibility)="togglePurchaseOrderDetailVisibility($event)">
     <purchase-order-detail></purchase-order-detail>
 </side-panel>
 

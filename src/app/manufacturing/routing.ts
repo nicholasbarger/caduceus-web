@@ -1,4 +1,4 @@
-import { InventoryItem } from '../inventory/inventory-item';
+import { InventoryItem } from '../inventory/inventory-items/inventory-item';
 import { RoutingStep } from './routing-step';
 
 export class Routing {

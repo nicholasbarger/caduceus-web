@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { InventoryItemListItem } from '../item-list/inventory-item-list-item';
+import { InventoryItemListItem } from '../inventory-item-list/inventory-item-list-item';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'inventory-items-page',
-  templateUrl: './items-page.component.html',
-  styleUrls: ['./items-page.component.css']
+  templateUrl: './inventory-items-page.component.html',
+  styleUrls: ['./inventory-items-page.component.css']
 })
 export class InventoryItemsPageComponent implements OnInit {
 
