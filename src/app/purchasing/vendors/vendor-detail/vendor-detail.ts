@@ -1,4 +1,4 @@
-import { AuditEntryListItem } from '../../common/audit-list/audit-entry-list-item';
+import { AuditEntryListItem } from '../../../common/audit-list/audit-entry-list-item';
 
 export class VendorDetail {
     constructor(

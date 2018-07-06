@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
-import { AuditEntryListItem } from '../common/audit-list/audit-entry-list-item';
-import { SelectListItem } from '../common/select-list/select-list-item';
+import { AuditEntryListItem } from '../../common/audit-list/audit-entry-list-item';
+import { SelectListItem } from '../../common/select-list/select-list-item';
 import { VendorListItem } from './vendor-list/vendor-list-item';
 import { VendorDetail } from './vendor-detail/vendor-detail';
 

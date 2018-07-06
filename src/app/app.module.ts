@@ -10,76 +10,22 @@ import { AccountModule } from './account/account.module';
 import { AdminModule } from './admin/admin.module';
 import { FullCalendarModule } from 'ng-fullcalendar';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { InventoryModule } from './inventory/inventory.module';
+import { ManufacturingModule } from './manufacturing/manufacturing.module';
 import { MarketingModule } from './marketing/marketing.module';
+import { PurchasingModule } from './purchasing/purchasing.module';
+import { SalesModule } from './sales/sales.module';
+import { WorkOrdersModule } from './work-orders/work-orders.module';
 
 import { AppComponent } from './app.component';
-import { CreateInventoryItemPageComponent } from './inventory/create-item-page/create-item-page.component';
-import { CreateItemFormComponent } from './inventory/create-item-form/create-item-form.component';
-import { CreateRoutingFormComponent } from './manufacturing/create-routing-form/create-routing-form.component';
-import { CreateRoutingPageComponent } from './manufacturing/create-routing-page/create-routing-page.component';
-import { CreateWorkOrderPageComponent } from './work-orders/create-work-order-page/create-work-order-page.component';
-import { CreateWorkOrderFormComponent } from './work-orders/create-work-order-form/create-work-order-form.component';
+
 import { DashboardPageComponent } from './dashboard/dashboard-page/dashboard-page.component';
-import { ItemListComponent } from './inventory/item-list/item-list.component';
-import { InventoryItemsPageComponent } from './inventory/items-page/items-page.component';
-import { InventoryItemService } from './inventory/inventory-item.service';
-import { InventoryItemSelectListComponent } from './inventory/inventory-item-select-list/inventory-item-select-list.component';
-import { InventoryItemDetailComponent } from './inventory/inventory-item-detail/inventory-item-detail.component';
-import { InventoryLocationListComponent } from './inventory/inventory-location-list/inventory-location-list.component';
-import { InventoryLocationsPageComponent } from './inventory/inventory-locations-page/inventory-locations-page.component';
-import { InventoryLocationService } from './inventory/inventory-location.service';
-import { InventoryStockListComponent } from './inventory/inventory-stock-list/inventory-stock-list.component';
-import { InventoryStockService } from './inventory/inventory-stock.service';
-import { InventorySubLocationListComponent } from './inventory/inventory-location-list/inventory-sub-location-list.component';
 import { MyWorkPageComponent } from './dashboard/my-work-page/my-work-page.component';
 import { NotFoundPageComponent } from './common/not-found-page/not-found-page.component';
-import { RoutingListComponent } from './manufacturing/routing-list/routing-list.component';
-import { RoutingListPageComponent } from './manufacturing/routing-list-page/routing-list-page.component';
-import { RoutingSelectListComponent } from './manufacturing/routing-select-list/routing-select-list.component';
-import { RoutingService } from './manufacturing/routing.service';
-import { StockPageComponent } from './inventory/stock-page/stock-page.component';
-import { UnitOfMeasureSelectListComponent } from './inventory/unit-of-measure-select-list/unit-of-measure-select-list.component';
-import { UnitOfMeasureService } from './inventory/unit-of-measure.service';
-import { WorkOrderListComponent } from './work-orders/work-order-list/work-order-list.component';
-import { WorkOrderDetailComponent } from './work-orders/work-order-detail/work-order-detail.component';
-import { WorkOrderService } from './work-orders/work-order.service';
-import { WorkOrdersCalendarPageComponent } from './work-orders/work-orders-calendar-page/work-orders-calendar-page.component';
-import { WorkOrdersPageComponent } from './work-orders/work-orders-page/work-orders-page.component';
-import { WorkOrderWorkflowComponent } from './work-orders/work-order-workflow/work-order-workflow.component';
-import { InventoryStockDetailComponent } from './inventory/inventory-stock-detail/inventory-stock-detail.component';
-import { RoutingDetailPageComponent } from './manufacturing/routing-detail-page/routing-detail-page.component';
-import { InventoryLocationDetailComponent } from './inventory/inventory-location-detail/inventory-location-detail.component';
-import { CreateInventoryLocationPageComponent } from './inventory/create-inventory-location-page/create-inventory-location-page.component';
-import { CreateInventoryLocationFormComponent } from './inventory/create-inventory-location-form/create-inventory-location-form.component';
-
-import { VendorsPageComponent } from './purchasing/vendors-page/vendors-page.component';
-import { VendorListComponent } from './purchasing/vendor-list/vendor-list.component';
-import { VendorService } from './purchasing/vendor.service';
-import { VendorDetailComponent } from './purchasing/vendor-detail/vendor-detail.component';
-import { CreateVendorPageComponent } from './purchasing/create-vendor-page/create-vendor-page.component';
-import { CreateVendorFormComponent } from './purchasing/create-vendor-form/create-vendor-form.component';
-import { PurchaseOrdersPageComponent } from './purchasing/purchase-orders-page/purchase-orders-page.component';
-import { PurchaseOrderListComponent } from './purchasing/purchase-order-list/purchase-order-list.component';
-import { CreatePurchaseOrderPageComponent } from './purchasing/create-purchase-order-page/create-purchase-order-page.component';
-import { PurchaseOrderDetailComponent } from './purchasing/purchase-order-detail/purchase-order-detail.component';
-
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardPageComponent },
-  { path: 'inventory', component: InventoryItemsPageComponent },
-  { path: 'inventory/items', component: InventoryItemsPageComponent },
-  { path: 'inventory/items/:id', component: InventoryItemsPageComponent },
-  { path: 'inventory/items/create', component: CreateInventoryItemPageComponent },
-  { path: 'inventory/locations', component: InventoryLocationsPageComponent },
-  { path: 'inventory/stock', component: StockPageComponent },
   { path: 'my-work', component: MyWorkPageComponent },
-  { path: 'purchasing/purchase-orders', component: PurchaseOrdersPageComponent },
-  { path: 'purchasing/purchase-orders/:id', component: PurchaseOrdersPageComponent },
-  { path: 'purchasing/vendors', component: VendorsPageComponent },
-  { path: 'purchasing/vendors/:id', component: VendorsPageComponent },
-  { path: 'work-orders', component: WorkOrdersPageComponent },
-  { path: 'work-orders/calendar', component: WorkOrdersCalendarPageComponent },
-  { path: 'work-orders/create', component: CreateWorkOrderPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 
@@ -90,65 +36,22 @@ const appRoutes: Routes = [
     AppCommonModule,
     BrowserModule,
     BrowserAnimationsModule,
-    FullCalendarModule,
     ChartsModule,
     CommonModule,
     FormsModule,
+    InventoryModule,
+    ManufacturingModule,
     MarketingModule,
+    PurchasingModule,
+    SalesModule,
+    WorkOrdersModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
     AppComponent,
-    CreateInventoryItemPageComponent, 
-    CreateItemFormComponent,
-    CreateRoutingFormComponent,
-    CreateRoutingPageComponent,
-    CreateWorkOrderPageComponent,
-    CreateWorkOrderFormComponent,
     DashboardPageComponent,
-    InventoryItemDetailComponent,
-    InventoryItemsPageComponent, 
-    InventoryItemSelectListComponent, 
-    InventoryLocationsPageComponent, 
-    InventorySubLocationListComponent,
-    ItemListComponent,
     MyWorkPageComponent,
-    NotFoundPageComponent,
-    RoutingListComponent,  
-    RoutingListPageComponent,
-    RoutingSelectListComponent,
-    StockPageComponent,
-    UnitOfMeasureSelectListComponent,
-    WorkOrdersCalendarPageComponent,
-    WorkOrdersPageComponent,
-    WorkOrderListComponent,
-    WorkOrderDetailComponent,
-    WorkOrderWorkflowComponent,
-    InventoryLocationListComponent,
-    InventoryStockListComponent,
-    InventoryStockDetailComponent,
-    RoutingDetailPageComponent,
-    InventoryLocationDetailComponent,
-    CreateInventoryLocationPageComponent,
-    CreateInventoryLocationFormComponent,
-    VendorListComponent,
-    VendorsPageComponent,
-    VendorDetailComponent,
-    CreateVendorPageComponent,
-    CreateVendorFormComponent,
-    PurchaseOrdersPageComponent,
-    PurchaseOrderListComponent,
-    CreatePurchaseOrderPageComponent,
-    PurchaseOrderDetailComponent
-  ],
-  providers: [
-    InventoryItemService,
-    InventoryLocationService,
-    InventoryStockService,
-    RoutingService,
-    UnitOfMeasureService,
-    VendorService,
-    WorkOrderService
+    NotFoundPageComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { VendorDetail } from './vendor-detail';
 import { VendorService } from '../vendor.service';
-import { PurchaseOrderListItem } from '../purchase-order-list/purchase-order-list-item';
+import { PurchaseOrderListItem } from '../../purchase-orders/purchase-order-list/purchase-order-list-item';
 
 @Component({
   selector: 'vendor-detail',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PurchaseOrderListItem } from './purchase-order-list-item';
 
 @Component({
@@ -7,7 +7,8 @@ import { PurchaseOrderListItem } from './purchase-order-list-item';
   styleUrls: ['./purchase-order-list.component.css']
 })
 export class PurchaseOrderListComponent implements OnInit {
-
+  @Output() onSelected = new EventEmitter<PurchaseOrderListItem>();
+  
   columns: any;
   items: PurchaseOrderListItem[];
 
@@ -32,4 +33,8 @@ export class PurchaseOrderListComponent implements OnInit {
     this.items.push(new PurchaseOrderListItem(3, '1002', 'Active'));
   }
 
+  select(purchaseOrder: PurchaseOrderListItem) {
+    console.log('from po list', purchaseOrder);
+    this.onSelected.emit(purchaseOrder);
+  }
 }
