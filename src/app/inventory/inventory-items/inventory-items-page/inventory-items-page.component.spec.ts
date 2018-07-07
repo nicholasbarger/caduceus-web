@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InventoryItemsPageComponent } from './items-page.component';
+import { InventoryItemsPageComponent } from './inventory-items-page.component';
 
 describe('InventoryItemsPageComponent', () => {
   let component: InventoryItemsPageComponent;

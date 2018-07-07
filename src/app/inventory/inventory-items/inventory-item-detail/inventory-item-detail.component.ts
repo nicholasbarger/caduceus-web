@@ -1,10 +1,10 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { InventoryItemService } from '../inventory-item.service';
 import { InventoryItemDetail } from './inventory-item-detail';
-import { RoutingListItem } from '../../manufacturing/routing-list/routing-list-item';
-import { VendorListItem } from '../../purchasing/vendors/vendor-list/vendor-list-item';
-import { WorkOrderListItem } from '../../work-orders/work-order-list/work-order-list-item';
-import { InventoryStockListItem } from '../inventory-stock-list/inventory-stock-list-item';
+import { RoutingListItem } from '../../../manufacturing/routing-list/routing-list-item';
+import { VendorListItem } from '../../../purchasing/vendors/vendor-list/vendor-list-item';
+import { WorkOrderListItem } from '../../../work-orders/work-order-list/work-order-list-item';
+import { InventoryStockListItem } from '../../inventory-stock/inventory-stock-list/inventory-stock-list-item';
 
 @Component({
   selector: 'inventory-item-detail',

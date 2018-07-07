@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InventoryItemService } from './inventory-item.service';
-import { InventoryItemsPageComponent } from './inventory-items-page/items-page.component';
+import { InventoryItemsPageComponent } from './inventory-items-page/inventory-items-page.component';
 import { CreateItemFormComponent } from './create-item-form/create-item-form.component';
 import { FormsModule } from '@angular/forms';
 import { AppCommonModule } from '../../common/app-common.module';
@@ -12,12 +12,14 @@ import { UnitOfMeasureSelectListComponent } from '../unit-of-measure-select-list
 import { UnitOfMeasureService } from '../unit-of-measure.service';
 import { InventoryItemDetailModule } from './inventory-item-detail/inventory-item-detail.module';
 import { InventoryItemListModule } from './inventory-item-list/inventory-item-list.module';
+import { ImportItemsPageComponent } from './import-items-page/import-items-page.component';
 
 const appRoutes: Routes = [
   { path: 'inventory', component: InventoryItemsPageComponent },
   { path: 'inventory/items', component: InventoryItemsPageComponent },
+  { path: 'inventory/items/create', component: InventoryItemsPageComponent },
+  { path: 'inventory/items/import', component: InventoryItemsPageComponent },
   { path: 'inventory/items/:id', component: InventoryItemsPageComponent },
-  { path: 'inventory/items/create', component: CreateInventoryItemPageComponent },
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     CreateItemFormComponent,
     CreateInventoryItemPageComponent,
     InventoryItemsPageComponent,
-    UnitOfMeasureSelectListComponent
+    UnitOfMeasureSelectListComponent,
+    ImportItemsPageComponent
   ],
   providers: [
     InventoryItemService,
